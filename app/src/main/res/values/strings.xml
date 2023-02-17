@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FoodNinja</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cellno">\u25CF\u25CF\u25CF\u25CF \u25CF\u25CF\u25CF\u25CF 4235</string>
+    <string name="s_gmail_com">\u25CF\u25CF\u25CF\u25CF @gmail.com</string>
+    <string name="forgot_your_password"><u>Forgot Your Password?</u></string>
+
+</resources>

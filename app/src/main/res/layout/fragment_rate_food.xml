@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RateFoodFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/callUser"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/pattern1"
+        android:scaleType="fitXY"/>
+
+
+    <ImageView
+        android:id="@+id/callUser"
+        android:layout_width="197sp"
+        android:layout_height="191sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".25"
+        android:src="@drawable/ratefood"/>
+
+
+    <TextView
+        android:id="@+id/tvCallname"
+        android:layout_width="212sp"
+        android:layout_height="66sp"
+        app:layout_constraintTop_toBottomOf="@id/callUser"
+        app:layout_constraintStart_toStartOf="@id/callUser"
+        app:layout_constraintEnd_toEndOf="@id/callUser"
+        android:fontFamily="@font/bentonsansbold"
+        android:textSize="25sp"
+        android:layout_marginTop="50sp"
+        android:text="Thank You!
+        Enjoy Your Meal"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/rateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvCallname"
+        app:layout_constraintStart_toStartOf="@id/tvCallname"
+        app:layout_constraintEnd_toEndOf="@id/tvCallname"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/bentonsansregular"
+        android:textSize="14sp"
+        android:text="Please rate your Food"
+        android:textColor="#663B3B3B"/>
+
+    <ImageView
+        android:id="@+id/ratIv"
+        android:layout_width="254dp"
+        android:layout_height="34sp"
+        app:layout_constraintTop_toBottomOf="@id/rateTv"
+        app:layout_constraintBottom_toTopOf="@id/etFeedback"
+        android:layout_marginBottom="80sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ratingicon"/>
+
+    <Button
+        android:layout_width="82sp"
+        android:layout_height="57sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/etbg"
+        android:fontFamily="@font/bentonsansbold"
+        android:textSize="14sp"
+        android:textColor="@color/theme1"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:id="@+id/btSkip"/>
+
+    <Button
+        android:id="@+id/btSubmit"
+        android:layout_width="0dp"
+        android:layout_height="57sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btSkip"
+        app:layout_constraintTop_toTopOf="@id/btSkip"
+        app:layout_constraintBottom_toBottomOf="@id/btSkip"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        android:background="@drawable/btnbg"
+        android:fontFamily="@font/bentonsansbold"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:layout_width="0sp"
+        android:layout_height="55sp"
+        app:layout_constraintBottom_toTopOf="@id/btSubmit"
+        app:layout_constraintStart_toStartOf="@id/btSubmit"
+        app:layout_constraintTop_toBottomOf="@id/ratIv"
+        app:layout_constraintEnd_toEndOf="@id/btSkip"
+        android:layout_marginBottom="20sp"
+        android:layout_marginTop="80sp"
+        android:background="@drawable/etbg"
+        android:fontFamily="@font/bentonsansregular"
+        android:textSize="14sp"
+        android:paddingLeft="53sp"
+        android:hint="Leave feedback"
+        android:id="@+id/etFeedback"
+        />
+
+    <ImageView
+        android:layout_width="24sp"
+        android:layout_height="24sp"
+        app:layout_constraintStart_toStartOf="@id/etFeedback"
+        app:layout_constraintTop_toTopOf="@id/etFeedback"
+        app:layout_constraintBottom_toBottomOf="@id/etFeedback"
+        android:layout_marginLeft="20sp"
+        android:src="@drawable/editicon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

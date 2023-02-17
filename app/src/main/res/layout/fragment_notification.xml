@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NotificationFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="-345dp"
+        android:rotation="203"
+        android:src="@drawable/pattern"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/backicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bentonsansbold"
+        android:gravity="start"
+        android:text="Notification"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@id/backImg"
+        app:layout_constraintTop_toBottomOf="@id/backImg"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstLayc"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHead"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/cardbg">
+
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icchecked"
+            android:id="@+id/cardiv"
+            />
+
+        <TextView
+            android:id="@+id/cardTv"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/cardiv"
+            android:layout_marginLeft="30sp"
+            app:layout_constraintTop_toTopOf="@id/cardiv"
+            android:fontFamily="@font/bentonsansmedium"
+            android:textSize="14sp"
+            android:text="Your order has been taken by the driver"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="5dp"
+            app:layout_constraintBottom_toTopOf="@id/pro"/>
+
+        <TextView
+            android:id="@+id/pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/cardTv"
+            app:layout_constraintTop_toBottomOf="@id/cardTv"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bentonsansregular"
+            android:textSize="14sp"
+            android:text="Recently"
+            android:textColor="#BCBCBC"
+            app:layout_constraintBottom_toBottomOf="@id/cardiv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/secondLayc"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        app:layout_constraintTop_toBottomOf="@id/firstLayc"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/cardbg">
+
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/moneyic"
+            android:id="@+id/cardivmoney"
+            />
+
+        <TextView
+            android:id="@+id/moneyTv"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/cardivmoney"
+            android:layout_marginLeft="30sp"
+            app:layout_constraintTop_toTopOf="@id/cardivmoney"
+            android:fontFamily="@font/bentonsansmedium"
+            android:textSize="14sp"
+            android:text="Topup for $100 was successful"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="5dp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/moneyTv"
+            app:layout_constraintTop_toBottomOf="@id/moneyTv"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bentonsansregular"
+            android:textSize="14sp"
+            android:text="10.00 Am"
+            android:textColor="#BCBCBC"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/thirdLayc"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        app:layout_constraintTop_toBottomOf="@id/secondLayc"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/cardbg">
+
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/xic"
+            android:id="@+id/cardivcross"
+            />
+
+        <TextView
+            android:id="@+id/xTv"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/cardivcross"
+            android:layout_marginLeft="30sp"
+            app:layout_constraintTop_toTopOf="@id/cardivcross"
+            android:fontFamily="@font/bentonsansmedium"
+            android:textSize="14sp"
+            android:text="Your order has been canceled"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="5dp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/xTv"
+            app:layout_constraintTop_toBottomOf="@+id/xTv"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bentonsansregular"
+            android:textSize="14sp"
+            android:text="22 Juny 2021"
+            android:textColor="#BCBCBC"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

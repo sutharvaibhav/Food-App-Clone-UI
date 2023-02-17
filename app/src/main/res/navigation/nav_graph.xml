@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.latlng.foodninja.HomeFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="abc">
+        <action
+            android:id="@+id/action_home_fragment_to_explore_fragment3"
+            app:destination="@id/explore_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_explorefood_fragment2"
+            app:destination="@id/explorefood_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_filter_fragment"
+            app:destination="@id/filter_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/explore_fragment"
+        android:name="com.latlng.foodninja.ExploreRestaurentFragment"
+        tools:layout="@layout/fragment_explore_restaurent"
+        android:label="bcd">
+        <action
+            android:id="@+id/action_explore_fragment_to_filter_fragment"
+            app:destination="@id/filter_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/explorefood_fragment"
+        android:name="com.latlng.foodninja.ExploreFoodFragment"
+        tools:layout="@layout/fragment_explore_food"
+        android:label="foodexplore">
+        <action
+            android:id="@+id/action_explorefood_fragment_to_filter_fragment"
+            app:destination="@id/filter_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filter_fragment"
+        android:name="com.latlng.foodninja.FilterFragment"
+        tools:layout="@layout/fragment_filter"
+        android:label="filter"/>
+
+    <fragment android:id="@+id/message_fragment"
+        android:name="com.latlng.foodninja.MessageFragment"
+        tools:layout="@layout/fragment_message"
+        android:label="message">
+        <action
+            android:id="@+id/action_message_fragment_to_chat_details_fragment"
+            app:destination="@id/chat_details_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/chat_details_fragment"
+        android:name="com.latlng.foodninja.adapters.ChatDetailsFragment"
+        tools:layout="@layout/fragment_chat_details"
+        android:label="chat">
+        <action
+            android:id="@+id/action_chat_details_fragment_to_message_fragment"
+            app:destination="@id/message_fragment" />
+        <action
+            android:id="@+id/action_chat_details_fragment_to_call_ring_fragment"
+            app:destination="@id/call_ring_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/call_ring_fragment"
+        android:name="com.latlng.foodninja.CallRingFragment"
+        tools:layout="@layout/fragment_call_ring"
+        android:label="callring">
+        <action
+            android:id="@+id/action_call_ring_fragment_to_call_end_fragment"
+            app:destination="@id/call_end_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/call_end_fragment"
+        android:name="com.latlng.foodninja.CallEndFragment"
+        tools:layout="@layout/fragment_call_end"
+        android:label="callend">
+        <action
+            android:id="@+id/action_call_end_fragment_to_finish_order_fragment"
+            app:destination="@id/finish_order_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/finish_order_fragment"
+        android:name="com.latlng.foodninja.FinishOrderFragment"
+        tools:layout="@layout/fragment_finish_order"
+        android:label="finishorder">
+        <action
+            android:id="@+id/action_finish_order_fragment_to_rate_order_fragment"
+            app:destination="@id/rate_order_fragment" />
+    </fragment>
+    <fragment android:id="@+id/rate_order_fragment"
+        android:name="com.latlng.foodninja.RateFoodFragment"
+        tools:layout="@layout/fragment_rate_food"
+        android:label="ratefood">
+        <action
+            android:id="@+id/action_rate_order_fragment_to_rate_restaurent_fragment"
+            app:destination="@id/rate_restaurent_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/rate_restaurent_fragment"
+        android:name="com.latlng.foodninja.RateRestaurentFragment"
+        tools:layout="@layout/fragment_rate_restaurent"
+        android:label="raterestaurent">
+        <action
+            android:id="@+id/action_rate_restaurent_fragment_to_voucharpromo_fragment"
+            app:destination="@id/voucharpromo_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/voucharpromo_fragment"
+        android:name="com.latlng.foodninja.VoucherFragment"
+        tools:layout="@layout/fragment_voucher"
+        android:label="vouchar">
+        <action
+            android:id="@+id/action_voucharpromo_fragment_to_notification_fragment"
+            app:destination="@id/notification_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/notification_fragment"
+        android:name="com.latlng.foodninja.NotificationFragment"
+        tools:layout="@layout/fragment_notification"
+        android:label="notification">
+    </fragment>
+
+    <fragment android:id="@+id/order_details_fragment"
+        android:name="com.latlng.foodninja.OrderDetailsFragment"
+        tools:layout="@layout/fragment_order_details"
+        android:label="orderdetails">
+    </fragment>
+
+
+</navigation>

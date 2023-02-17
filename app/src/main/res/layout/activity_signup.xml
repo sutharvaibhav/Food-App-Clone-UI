@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivitySignup"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/signupbg"
+        android:scaleType="fitXY"/>
+
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="175sp"
+        android:layout_height="140sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".06"
+        android:src="@drawable/logo"/>
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:text="FoodNinja"
+        android:fontFamily="@font/viga_regular"
+        android:textSize="40sp"
+        android:textColor="#53E88B"
+        />
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        android:text="Deliever Favorite Food"
+        android:fontFamily="@font/viga_regular"
+        android:textSize="13sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Login To Your Account"
+        android:fontFamily="@font/bentonsansbold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="45sp"
+        android:textColor="@color/black"/>
+    
+    <EditText
+        android:id="@+id/etMail"
+        android:layout_width="match_parent"
+        android:layout_height="57sp"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin"
+        android:layout_marginTop="30sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/etbg"
+        android:hint="Email"
+        android:fontFamily="@font/bentonsansregular"
+        android:textSize="14sp"
+        android:paddingLeft="20sp"
+        android:elevation="20sp"
+        android:inputType="textEmailAddress"
+        android:outlineSpotShadowColor="#000000"
+        android:maxLength="25"/>
+
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="match_parent"
+        android:layout_height="57sp"
+        app:layout_constraintTop_toBottomOf="@id/etMail"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/etbg"
+        android:hint="Password"
+        android:fontFamily="@font/bentonsansregular"
+        android:textSize="14sp"
+        android:paddingLeft="20sp"
+        android:inputType="textPassword"
+        android:outlineSpotShadowColor="#389BE8"
+        android:elevation="10sp"
+        android:maxLength="25"/>
+
+
+
+    <TextView
+        android:id="@+id/tvCont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etPass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Or Continue With"
+        android:fontFamily="@font/bentonsansbold"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        android:textColor="@color/black"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btFacebook"
+        android:layout_width="0sp"
+        android:layout_height="57sp"
+        android:paddingStart="10sp"
+        android:paddingRight="10sp"
+        app:layout_constraintStart_toStartOf="@id/etPass"
+        app:layout_constraintEnd_toStartOf="@id/btGoogle"
+        app:layout_constraintTop_toBottomOf="@id/tvCont"
+        app:layout_constraintBottom_toTopOf="@id/forgetPass"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="10sp"
+        android:background="@drawable/etbg">
+
+    <ImageView
+        android:id="@+id/fbLogo"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        app:layout_constraintTop_toTopOf="@id/btFacebook"
+        app:layout_constraintBottom_toBottomOf="@id/btFacebook"
+        app:layout_constraintStart_toStartOf="@id/btFacebook"
+        app:layout_constraintEnd_toStartOf="@id/fbTv"
+        android:layout_marginRight="10sp"
+        android:src="@drawable/facebookicon"
+        />
+
+    <TextView
+        android:id="@+id/fbTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btFacebook"
+        app:layout_constraintBottom_toBottomOf="@id/btFacebook"
+        app:layout_constraintEnd_toEndOf="@id/btFacebook"
+        app:layout_constraintStart_toEndOf="@id/fbLogo"
+        android:text="Facebook"
+        android:textSize="14sp"
+        android:fontFamily="@font/bentonsansmedium"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btGoogle"
+        android:layout_width="0dp"
+        android:layout_height="57sp"
+        android:paddingStart="10sp"
+        android:paddingRight="10sp"
+        app:layout_constraintStart_toEndOf="@id/btFacebook"
+        app:layout_constraintEnd_toEndOf="@id/etPass"
+        app:layout_constraintTop_toTopOf="@id/btFacebook"
+        app:layout_constraintBottom_toBottomOf="@id/btFacebook"
+        android:background="@drawable/etbg">
+
+        <ImageView
+            android:id="@+id/googLogo"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            app:layout_constraintTop_toTopOf="@id/btGoogle"
+            app:layout_constraintBottom_toBottomOf="@id/btGoogle"
+            app:layout_constraintStart_toStartOf="@id/btGoogle"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toStartOf="@id/googleTv"
+            android:src="@drawable/googleicon" />
+
+        <TextView
+            android:id="@+id/googleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/btGoogle"
+            app:layout_constraintStart_toEndOf="@id/googLogo"
+            app:layout_constraintBottom_toBottomOf="@id/btGoogle"
+            app:layout_constraintEnd_toEndOf="@id/btGoogle"
+            android:text="Google"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/bentonsansmedium"
+            android:textAllCaps="false"
+            android:textColor="@color/black"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/forgetPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btFacebook"
+        app:layout_constraintBottom_toTopOf="@id/btLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/forgot_your_password"
+        android:textSize="12sp"
+        android:fontFamily="@font/bentonsansmedium"
+        android:textAllCaps="false"
+        android:textColor="@color/theme1"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="36sp"/>
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="157sp"
+        android:layout_height="57sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30sp"
+        android:fontFamily="@font/bentonsansbold"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:background="@drawable/btnbg"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>

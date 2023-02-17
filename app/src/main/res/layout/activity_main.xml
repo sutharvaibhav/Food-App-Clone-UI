@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/frameFeed"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navMenu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/cardbg"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/proLayout"
+            android:id="@+id/homeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@drawable/home_selected_bg"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/imgNavHome"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/homenavigation"/>
+
+            <TextView
+                android:id="@+id/navHomeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                app:layout_constraintTop_toTopOf="@id/imgNavHome"
+                app:layout_constraintBottom_toBottomOf="@id/imgNavHome"
+                app:layout_constraintStart_toEndOf="@id/imgNavHome"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bentonsansmedium"
+                android:textSize="12dp"
+                android:textColor="@color/black"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toEndOf="@id/homeLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cartLayout"
+            app:layout_constraintHorizontal_bias=".4"
+            android:id="@+id/proLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:paddingStart="10dp"
+            android:layout_marginLeft="5dp"
+            android:paddingEnd="10dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgNavPro"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/profilenavigation"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/navProTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                app:layout_constraintTop_toTopOf="@id/imgNavPro"
+                app:layout_constraintBottom_toBottomOf="@id/imgNavPro"
+                app:layout_constraintStart_toEndOf="@id/imgNavPro"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bentonsansmedium"
+                android:textSize="12dp"
+                android:textColor="@color/black"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toEndOf="@id/proLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/chatLayout"
+            app:layout_constraintHorizontal_bias=".6"
+            android:id="@+id/cartLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:paddingStart="10dp"
+            android:layout_marginLeft="5dp"
+            android:paddingEnd="10dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgNavCart"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/cartnavigation"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/navCartTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart"
+                app:layout_constraintTop_toTopOf="@id/imgNavCart"
+                app:layout_constraintBottom_toBottomOf="@id/imgNavCart"
+                app:layout_constraintStart_toEndOf="@id/imgNavCart"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bentonsansmedium"
+                android:textSize="12dp"
+                android:textColor="@color/black"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toEndOf="@id/cartLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".85"
+            android:id="@+id/chatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:paddingStart="10dp"
+            android:layout_marginLeft="5dp"
+            android:paddingEnd="10dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgNavChat"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/chatnavigation"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/navChatTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                app:layout_constraintTop_toTopOf="@id/imgNavChat"
+                app:layout_constraintBottom_toBottomOf="@id/imgNavChat"
+                app:layout_constraintStart_toEndOf="@id/imgNavChat"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bentonsansmedium"
+                android:textSize="12dp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                app:layout_constraintTop_toTopOf="@id/imgNavChat"
+                app:layout_constraintEnd_toEndOf="@id/imgNavChat"
+                android:src="@drawable/reddot"
+                android:layout_marginRight="-5dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

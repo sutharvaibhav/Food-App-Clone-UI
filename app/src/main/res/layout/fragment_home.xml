@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/pattern"
+            android:rotation="203"
+            android:layout_marginTop="-345dp"
+            android:layout_marginLeft="100dp"/>
+
+        <TextView
+            android:id="@+id/tvHead"
+            android:layout_width="233dp"
+            android:layout_height="66dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Find Your Favorite Food"
+            android:fontFamily="@font/bentonsansbold"
+            android:textSize="31dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="start"
+            android:textColor="@color/black"/>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notibg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvHead"
+            app:layout_constraintBottom_toBottomOf="@id/tvHead"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/notibg">
+
+            <ImageView
+                android:id="@+id/backImg"
+                android:layout_width="19dp"
+                android:layout_height="23dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_notification"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <ImageView
+            android:id="@+id/btFilter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/tvHead"
+            app:layout_constraintStart_toStartOf="@id/notibg"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_filter"/>
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@id/tvHead"
+            app:layout_constraintEnd_toStartOf="@id/btFilter"
+            app:layout_constraintTop_toTopOf="@id/btFilter"
+            android:background="@drawable/orangebg"
+            android:layout_marginRight="10dp"
+            android:hint="What do you want to order?"
+            android:paddingLeft="60dp"
+            android:fontFamily="@font/bentonsansregular"
+            android:textSize="12dp"
+            android:textColorHint="#DA6317"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintStart_toStartOf="@id/etSearch"
+            app:layout_constraintTop_toTopOf="@id/etSearch"
+            app:layout_constraintBottom_toBottomOf="@id/etSearch"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_search"/>
+
+
+        <ImageView
+            android:id="@+id/ivAmt"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            app:layout_constraintTop_toBottomOf="@id/etSearch"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/tvHead"
+            app:layout_constraintEnd_toEndOf="@id/btFilter"
+            android:src="@drawable/home_advertising"/>
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ivAmt"
+            app:layout_constraintStart_toStartOf="@id/ivAmt"
+            android:text="Nearest Restaurant"
+            android:fontFamily="@font/bentonsansbold"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/viewMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/titleTv"
+            app:layout_constraintBottom_toBottomOf="@id/titleTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/bentonsansbook"
+            android:textSize="12dp"
+            android:textColor="#FF7C32"
+            android:text="View More"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/horiView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/ivAmt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTv"
+            android:orientation="horizontal"
+            tools:listitem="@layout/homeitem_card" />
+
+        <TextView
+            android:id="@+id/tvPopRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/horiView"
+            app:layout_constraintStart_toStartOf="@id/horiView"
+            android:text="Popular Menu"
+            android:fontFamily="@font/bentonsansbold"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/viewMoreRest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tvPopRes"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPopRes"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/bentonsansbook"
+            android:textSize="12dp"
+            android:textColor="#FF7C32"
+            android:text="View More"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vertView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ivAmt"
+            app:layout_constraintEnd_toEndOf="@id/ivAmt"
+            app:layout_constraintTop_toBottomOf="@id/tvPopRes"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/home_verticalcard"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
